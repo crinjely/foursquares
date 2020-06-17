@@ -1,9 +1,22 @@
 
-// alert("welcome to my trash game")
-// alert('its four corners')
-// alert("if you dont know how to play then you don't have a childhood :)")
-// alert('look in console for the coler/ number')
-// alert("(right click than inspect then press conole)")
+const userName = prompt("what is your name?")
+
+
+if(userName === 'justin'){
+    alert('oh, your name is justin?? >:)')
+} else {
+    alert(`your name is now ${userName}`)
+}
+
+
+
+
+
+if(userName.toLowerCase() === 'justin'){
+    const justinImage = document.querySelector("#justin");
+    justinImage.classList.remove('hidden')
+}
+
 
 const container = document.querySelector('.container');
 const colors = ['red', 'green', 'yellow', 'blue']
@@ -29,18 +42,18 @@ function userClick(ev){
 
 function randomClicked() {
     if(!userPick) {
-        alert('pick a color first');
+        alert(`pick a color first, ${userName}`);
         return;
     }
 
     const randomNumber = findRandomNumber()
     const computerColor = colors[randomNumber];
-    let message = 'Computer picked ' + computerColor + '!'; 
+    let message =  `Computer picked ${computerColor}! `; 
     
     if(computerColor === userPick) {
-        message += ' You lose!'
+        message +=  ` You lose ${userName}!`
     } else {
-        message += ' You survive.... for now!'
+        message +=  ` You survived for now ${userName}!`
     }
 
     alert(message);
@@ -59,9 +72,6 @@ const button1 = buttons[0];
 
 
 
+while (1 > 2){
 
-
-
-
-
-
+}
